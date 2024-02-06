@@ -15,4 +15,5 @@ use App\Http\Controllers\PubblicController;
 */
 
 Route::get('/', [PubblicController::class, 'home'])->name('home');
-Route::get('/tutti_gli_articoli', [PubblicController::class, 'articles'])->name('articles');
+Route::get('/Articles/index', [PubblicController::class, 'articles'])->name('articles');
+Route::get('/Articles/edit/{article}', [PubblicController::class, 'edit'])->name('edit');

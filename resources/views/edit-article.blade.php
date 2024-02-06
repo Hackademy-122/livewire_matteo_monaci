@@ -1,16 +1,10 @@
 <x-layout>
 
-    @if (session('message'))
-        <div class="alert alert-success">
-            {{ session('message') }}
-        </div>
-    @endif
-
     <div class="container mt-5">
         <div class="row justify-content-center">
 
             <div class="col-10 bg-black text-center">
-                <h1 class="text-white p-3">Tutti i nostri articoli</h1>
+                <h1 class="text-white p-3">Modifica Articolo: {{$article->title}}</h1>
             </div>
 
         </div>
@@ -18,7 +12,7 @@
         <div class="row justify-content-center mt-5">
             <div class="col-8">
 
-                <livewire:all-articles />
+                <livewire:edit-form :articleObject="$article"/>
 
             </div>
         </div>

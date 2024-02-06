@@ -20,6 +20,9 @@
                     <td>
                         <button class="btn btn-danger"  wire:click="destroy({{$article->id}})">Cancella!</button>
                     </td>
+                    <td>
+                        <a href="{{route('edit', $article)}}">Modifica</a>
+                    </td>
                 </tr>
 
             </tbody>
